@@ -28,7 +28,6 @@ build_script:
   - travis-tool.sh install_github jimhester/lintr
   - travis-tool.sh install_r babette
   - travis-tool.sh install_github richelbilderbeek/mcbette
-  - travis-tool.sh install_github thijsjanzen/nLTT
   - travis-tool.sh install_github rsetienne/PBD/PBD
   - travis-tool.sh install_github richelbilderbeek/becosys
   - travis-tool.sh install_github thijsjanzen/nodeSub
@@ -41,24 +40,24 @@ test_script:
 
 after_test:
   # Delete all previous results
-  - rm -rf example_1_314
+  - rm -rf example_20_314
   # Go!
-  - Rscript example_1.R
+  - Rscript example_20.R
   # Check if all files are created
   # Basic files: true alignment
-  - if not exist "example_1_314/true_alignment.fas" exit 1
-  - if not exist "example_1_314/true_alignment.png" exit 1
+  - if not exist "example_20_314/true_alignment.fas" exit 1
+  - if not exist "example_20_314/true_alignment.png" exit 1
   # Basic files: true alignment, generative model
-  - if not exist "example_1_314/true_alignment_gen.xml" exit 1
-  - if not exist "example_1_314/true_alignment_gen.xml.state" exit 1
-  - if not exist "example_1_314/true_alignment_gen.log" exit 1
-  - if not exist "example_1_314/true_alignment_gen.trees" exit 1
-  - if not exist "example_1_314/true_alignment_gen.csv" exit 1
-  - if not exist "example_1_314/true_errors_gen.csv" exit 1
+  - if not exist "example_20_314/true_alignment_gen.xml" exit 1
+  - if not exist "example_20_314/true_alignment_gen.xml.state" exit 1
+  - if not exist "example_20_314/true_alignment_gen.log" exit 1
+  - if not exist "example_20_314/true_alignment_gen.trees" exit 1
+  - if not exist "example_20_314/true_alignment_gen.csv" exit 1
+  - if not exist "example_20_314/true_errors_gen.csv" exit 1
   # Derived files: true alignment, generative model
-  - if not exist "example_1_314/esses_gen.latex" exit 1
-  - if not exist "example_1_314/true_error_violin_gen.png" exit 1
-  - if not exist "example_1_314/true_posterior_gen.png" exit 1
+  - if not exist "example_20_314/esses_gen.latex" exit 1
+  - if not exist "example_20_314/true_error_violin_gen.png" exit 1
+  - if not exist "example_20_314/true_posterior_gen.png" exit 1
 
 on_failure:
   - 7z a failure.zip *.Rcheck\*
