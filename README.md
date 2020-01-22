@@ -12,3 +12,9 @@ that shows the true and twin error distribution for an increasing number of tips
 
 ![](example_20_314/errors.png)
 
+![](example_20_315/errors.png)
+
+![](example_20_316/errors.png)
+
+![](example_20_317/errors.png)
+
