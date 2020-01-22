@@ -67,9 +67,23 @@ for (rng_seed in seq(314, 317)) {
     }
   }
 
+  twinning_params <- create_twinning_params(
+    rng_seed_twin_tree = rng_seed,
+    sim_twin_tree_fun = get_sim_bd_twin_tree_fun(),
+    rng_seed_twin_alignment = rng_seed,
+    sim_twal_fun = get_sim_twal_same_n_muts_fun(
+      mutation_rate = 0.1,
+      max_n_tries = 1000
+    ),
+    twin_tree_filename = "twin_tree.newick",
+    twin_alignment_filename = "twin_alignment.fas",
+    twin_evidence_filename = "twin_evidence.csv"
+  )
+
   pir_params <- create_pir_params(
     alignment_params = alignment_params,
-    experiments = experiments
+    experiments = experiments,
+    twinning_params = twinning_params
   )
 
   rm_pir_param_files(pir_params)
