@@ -10,6 +10,12 @@ error_vs_n_taxa <- function(n_replicates = 2) {
   }
   stopifnot(beastier::is_beast2_installed())
   stopifnot(mauricer::is_beast2_ns_pkg_installed())
+
+  suppressMessages(library(pirouette))
+  suppressMessages(library(ggplot2))
+  
+  root_folder <- getwd()
+  example_no <- 20
   
   # parsetting
   l_parses <- 4
@@ -86,6 +92,10 @@ error_vs_n_taxa <- function(n_replicates = 2) {
       pir_paramses = pir_paramses
     )
   }
+  example_folder <- file.path(root_folder, paste0("example_", example_no, "_", "GL"))
+  dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
+  setwd(example_folder)
+  save(pir_outs, file = "pir_outs_GL")
   pir_outs
 }
 error_vs_n_taxa(n_replicates = 2)
