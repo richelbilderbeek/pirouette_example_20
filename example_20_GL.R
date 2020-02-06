@@ -1,6 +1,5 @@
 error_vs_n_taxa <- function(n_replicates = 2) {
   
-  print("Start")
   # check beast
   if (beastier::is_beast2_installed() == FALSE) {
     beastier::install_beast2() 
@@ -13,9 +12,13 @@ error_vs_n_taxa <- function(n_replicates = 2) {
 
   suppressMessages(library(pirouette))
   suppressMessages(library(ggplot2))
-  
+
+  # folder setting
   root_folder <- getwd()
   example_no <- 20
+  example_folder <- file.path(root_folder, paste0("example_", example_no, "_", "GL"))
+  dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
+  setwd(example_folder)
   
   # parsetting
   l_parses <- 4
@@ -33,7 +36,7 @@ error_vs_n_taxa <- function(n_replicates = 2) {
   
   # simulate trees
   sim_data <- vector("list", length(parses))
-  for (i in seq_along(parses)){
+  for (i in seq_len(l_parses)) {
     pars <- parses[[i]]
     for (seed in seq_len(n_replicates)) {
       set.seed(seed)
@@ -50,7 +53,7 @@ error_vs_n_taxa <- function(n_replicates = 2) {
   
   # create pir_params
   pir_paramseses <- vector("list", length(parses))
-  for (i in seq_along(parses)){
+  for (i in seq_len(l_parses)) {
     for (seed in seq_len(n_replicates)) {
       phylogeny1 <- sim_data[[i]][[1]]
       pir_paramseses[[i]][[seed]] <- pirouette::create_test_pir_params(
@@ -92,10 +95,8 @@ error_vs_n_taxa <- function(n_replicates = 2) {
       pir_paramses = pir_paramses
     )
   }
-  example_folder <- file.path(root_folder, paste0("example_", example_no, "_", "GL"))
-  dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
-  setwd(example_folder)
-  save(pir_outs, file = "pir_outs_GL")
+
+  save(pir_outs, file = paste0("pir_outs_GL_", n_replicates))
   pir_outs
 }
 error_vs_n_taxa(n_replicates = 2)
