@@ -96,7 +96,17 @@ error_vs_n_taxa <- function(n_replicates = 2) {
     )
   }
 
-  save(pir_outs, file = paste0("pir_outs_GL_", n_replicates))
+  # return and save out
+  if (!dir.exists("gl")) {
+    dir.create("gl")
+  }
+  save(
+    pir_outs,
+    file = file.path(
+      "gl",
+      paste0("dd_out_", n_replicates, ".RData")
+    )
+  )
   pir_outs
 }
-error_vs_n_taxa(n_replicates = 2)
+error_vs_n_taxa()

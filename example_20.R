@@ -24,7 +24,6 @@ testthat::expect_error(seed_to_n_taxa(318))
 
 for (rng_seed in seq(314, 317)) {
 
-
   example_folder <- file.path(root_folder, paste0("example_", example_no, "_", rng_seed))
   dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
   setwd(example_folder)
