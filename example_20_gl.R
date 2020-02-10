@@ -1,4 +1,4 @@
-error_vs_n_taxa <- function(n_replicates = 2) {
+error_vs_ntaxa <- function(n_replicates = 2) {
   
   # check beast
   if (beastier::is_beast2_installed() == FALSE) {
@@ -16,7 +16,7 @@ error_vs_n_taxa <- function(n_replicates = 2) {
   # folder setting
   root_folder <- getwd()
   example_no <- 20
-  example_folder <- file.path(root_folder, paste0("example_", example_no, "_", "GL"))
+  example_folder <- file.path(root_folder, paste0("example_", example_no, "_", "gl"))
   dir.create(example_folder, showWarnings = FALSE, recursive = TRUE)
   setwd(example_folder)
   
@@ -97,16 +97,13 @@ error_vs_n_taxa <- function(n_replicates = 2) {
   }
 
   # return and save out
-  if (!dir.exists("gl")) {
-    dir.create("gl")
-  }
   save(
     pir_outs,
     file = file.path(
-      "gl",
-      paste0("dd_out_", n_replicates, ".RData")
+      example_folder,
+      paste0("error_vs_ntaxa_", n_replicates, ".RData")
     )
   )
   pir_outs
 }
-error_vs_n_taxa()
+error_vs_ntaxa()
