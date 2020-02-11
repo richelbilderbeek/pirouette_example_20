@@ -1,4 +1,4 @@
-error_vs_ntaxa <- function(n_replicates = 2) {
+error_vs_ntaxa <- function(n_replicates = 2, seq_length = 1e3) {
   
   # check beast
   if (beastier::is_beast2_installed() == FALSE) {
@@ -50,6 +50,16 @@ error_vs_ntaxa <- function(n_replicates = 2) {
       ape::is.ultrametric(sim_data[[i]][[seed]])
     }
   }
+
+  # experiments
+  if (rappdirs::app_dir()$os == "win") {
+    experiment <- pirouette::create_gen_experiment()
+    experiment$est_evidence_mcmc$chain_length <- 1e6
+    experiment$inference_model$mcmc$chain_length <- 1e6
+    experiments <- list(experiment)
+  } else {
+    experiments <- pirouette::create_all_experiments()
+  }
   
   # create pir_params
   pir_paramseses <- vector("list", length(parses))
@@ -64,7 +74,7 @@ error_vs_ntaxa <- function(n_replicates = 2) {
             ),
             site_model = beautier::create_jc69_site_model()
           ),
-          root_sequence = pirouette::create_blocked_dna(length = 1e3),
+          root_sequence = pirouette::create_blocked_dna(length = seq_length),
         ),
         twinning_params = pirouette::create_twinning_params(
           rng_seed_twin_tree = seed,
@@ -77,7 +87,7 @@ error_vs_ntaxa <- function(n_replicates = 2) {
             site_model = beautier::create_jc69_site_model()
           )
         ), 
-        experiments = pirouette::create_all_experiments(),
+        experiments = experiments,
         error_measure_params = pirouette::create_error_measure_params(
           error_fun = pirouette::get_nltt_error_fun()
         )
@@ -106,4 +116,8 @@ error_vs_ntaxa <- function(n_replicates = 2) {
   )
   pir_outs
 }
-error_vs_ntaxa()
+error_vs_ntaxa(
+  n_replicates = 2,
+  seq_length = 1e2 * (rappdirs::app_dir()$os == "win") +
+    1e3 * (rappdirs::app_dir()$os != "win")
+)
