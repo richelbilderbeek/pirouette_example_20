@@ -12,6 +12,7 @@ root_folder <- getwd()
 example_no <- 20
 n_replicates <- 5
 n_taxa <- c(10, 20, 30, 40)
+crown_age <- 10
 is_testing <- is_on_travis()
 
 # Number of replicates per number of taxa
@@ -37,7 +38,7 @@ for (i in seq_along(rng_seeds)) {
 
   phylogenies[[i]] <- create_yule_tree(
     n_taxa = n_taxa,
-    crown_age = 10
+    crown_age = crown_age
   )
 }
 expect_equal(length(phylogenies), length(rng_seeds))
@@ -82,7 +83,7 @@ for (i in seq_along(phylogenies)) {
 
   pir_paramses[[i]] <- pir_params
 }
-expect_equal(length(pir_paramses), n_phylogenies)
+expect_equal(length(pir_paramses), length(phylogenies))
 ################################################################################
 # Shorter run on Travis
 ################################################################################
