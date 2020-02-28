@@ -51,9 +51,7 @@ pir_paramses <- create_std_pir_paramses(
   n = length(phylogenies)
 )
 expect_equal(length(pir_paramses), length(phylogenies))
-################################################################################
-# Shorter run on Travis
-################################################################################
+
 if (is_testing) {
   pir_paramses <- shorten_pir_paramses(pir_paramses)
 }
@@ -88,13 +86,10 @@ for (i in seq_along(pir_outs)) {
   rng_seed <- pir_paramses[[i]]$alignment_params$rng_seed
   folder_name <- file.path(paste0("example_", example_no, "_", rng_seed))
 
-  utils::write.csv(
-    x = pir_outs[[i]],
-    file = file.path(folder_name, "errors.csv"),
-    row.names = FALSE
+  pir_save(
+    phylogeny = phylogenies[[i]],
+    pir_out = pir_outs[[i]],
+    folder_name = folder_name
   )
-
-  pir_plots(pir_outs[[i]]) +
-    ggsave(file.path(folder_name, "errors.png"))
 }
 
