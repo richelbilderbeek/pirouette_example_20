@@ -17,7 +17,7 @@ is_testing <- is_on_travis()
 # Number of replicates per number of taxa
 if (is_testing) {
   n_replicates <- 2
-  n_taxa <- c(3, 4, 5)
+  n_taxa <- c(3, 4)
 }
 rng_seeds <- seq(314, 314 - 1 + length(n_taxa) * n_replicates)
 n_taxas <- rep(n_taxa, each = n_replicates)
