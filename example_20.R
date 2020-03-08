@@ -7,12 +7,12 @@ suppressMessages(library(pirouette))
 library(testthat)
 
 # Constants
-is_testing <- is_on_travis()
+is_testing <- is_on_ci()
 example_no <- 20
 n_replicates <- 5
 n_taxa <- c(10, 20, 30, 40)
 crown_age <- 10
-is_testing <- is_on_travis()
+is_testing <- is_on_ci()
 
 # Number of replicates per number of taxa
 if (is_testing) {
