@@ -13,6 +13,7 @@ example_no <- 20
 n_replicates <- 5
 n_taxa <- c(10, 20, 30, 40)
 crown_age <- 10
+folder_name <- paste0("example_", example_no)
 
 # Number of replicates per number of taxa
 if (is_testing) {
@@ -36,7 +37,8 @@ expect_equal(length(phylogenies), length(rng_seeds))
 
 # Create pirouette parameter sets
 pir_paramses <- create_std_pir_paramses(
-  n = length(phylogenies)
+  n = length(phylogenies),
+  folder_name = folder_name
 )
 expect_equal(length(pir_paramses), length(phylogenies))
 if (is_testing) {
