@@ -4,6 +4,7 @@
 # reasonably small trees (say in the magnitudes of hundreds of them)
 # with 10:40 taxa
 suppressMessages(library(pirouette))
+library(ggplot2)
 library(testthat)
 
 # Constants
@@ -12,7 +13,6 @@ example_no <- 20
 n_replicates <- 5
 n_taxa <- c(10, 20, 30, 40)
 crown_age <- 10
-is_testing <- is_on_ci()
 
 # Number of replicates per number of taxa
 if (is_testing) {
@@ -26,11 +26,9 @@ expect_equal(length(rng_seeds), length(n_taxas))
 # Create phylogenies
 phylogenies <- list()
 for (i in seq_along(rng_seeds)) {
-  rng_seed <- rng_seeds[i]
-  n_taxa <- n_taxas[i]
-  set.seed(rng_seed)
+  set.seed(rng_seeds[i])
   phylogenies[[i]] <- create_yule_tree(
-    n_taxa = n_taxa,
+    n_taxa = n_taxas[i],
     crown_age = crown_age
   )
 }
@@ -52,11 +50,12 @@ pir_outs <- pir_runs(
 )
 
 # Save
-for (i in seq_along(pir_outs)) {
-  pir_save(
-    phylogeny = phylogenies[[i]],
-    pir_params = pir_paramses[[i]],
-    pir_out = pir_outs[[i]],
-    folder_name = dirname(pir_paramses[[i]]$alignment_params$fasta_filename)
-  )
+for (i in seq_along(n_taxa)) {
+  n <- n_taxa[i]
+  from_index <- ((i - 1) * n_replicates) + 1
+  to_index <- ((i - 1) * n_replicates) + n_replicates
+  pir_plots(
+    pir_outs = pir_outs[from_index:to_index]
+  ) + ggtitle(paste("Number of taxa:", n)) +
+    ggsave(filename = paste0("errors_", n, ".png"), width = 7, height = 7)
 }
