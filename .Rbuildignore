@@ -5,7 +5,12 @@
 ^doc$
 ^scripts$
 ^\.travis\.yml$
+^CONTRIBUTING\.md$
+^CODE_OF_CONDUCT\.md$
+^NEWS\.md$
 ^appveyor\.yml$
-^example_.*\.R$
-^example_*$
+^example_20\.log$
+^example_20$
+^LICENSE$
+^\.github$
 

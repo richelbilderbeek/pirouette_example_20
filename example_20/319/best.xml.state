@@ -1,0 +1,28 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment'>(((((((0:0.05739739884331825,8:0.05739739884331825)21:0.019421610561844035,(7:0.02390150010864468,19:0.02390150010864468)25:0.052917509296517604)28:0.043754467239932066,11:0.12057347664509435)26:0.1312569589825147,14:0.25183043562760904)34:0.02066731476567335,2:0.2724977503932824)31:0.6436534804765471,(((((1:0.09451125125636646,15:0.09451125125636646)23:0.10771653342721692,4:0.20222778468358338)22:0.31177797973528787,(3:0.41239493461680143,(6:0.15105828739726587,13:0.15105828739726587)33:0.26133664721953553)30:0.10161082980206981)37:0.07437006059137541,((5:0.303948984776476,(10:0.21022374991010495,12:0.21022374991010495)27:0.09372523486637108)20:0.03249573399019473,16:0.33644471876667076)24:0.2519311062435759)32:0.2674633832807175,9:0.8558392082909642)29:0.060312022578865365)36:0.08386732754995185,(17:0.36615056196291196,18:0.36615056196291196)35:0.6338679964568694)38:0.0</statenode>
+<statenode id='kappa.s:alignment'>kappa.s:alignment[1 1] (0.0,Infinity): 1.02013458014974 </statenode>
+<statenode id='freqParameter.s:alignment'>freqParameter.s:alignment[4 1] (0.0,1.0): 0.23653008162916997 0.254017377459638 0.25374242866077157 0.25571011225042023 </statenode>
+<statenode id='ucldStdev.c:alignment'>ucldStdev.c:alignment[1 1] (0.0,Infinity): 0.04828969792763049 </statenode>
+<statenode id='rateCategories.c:alignment'>rateCategories.c:alignment[38 1] (0,37): 6 27 24 1 15 24 11 19 11 26 16 19 31 8 21 29 32 20 12 0 34 0 12 36 32 22 34 31 13 14 6 15 10 1 13 18 30 4 </statenode>
+<statenode id='BDBirthRate.t:alignment'>BDBirthRate.t:alignment[1 1] (0.0,10000.0): 0.9418446987328857 </statenode>
+<statenode id='BDDeathRate.t:alignment'>BDDeathRate.t:alignment[1 1] (0.0,1.0): 0.392721064402712 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:alignment","p":0.31065820658778487,"accept":74851,"reject":194751,"acceptFC":74091,"rejectFC":194503,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:alignment","p":0.09426620282295267,"accept":49578,"reject":220259,"acceptFC":48706,"rejectFC":220127,"rejectIv":129128,"rejectOp":129128},
+{"id":"BirthDeathTreeScaler.t:alignment","p":0.8591937329418268,"accept":42347,"reject":227339,"acceptFC":42295,"rejectFC":226394,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:alignment","p":0.6819035609761745,"accept":32518,"reject":237013,"acceptFC":32448,"rejectFC":236082,"rejectIv":89818,"rejectOp":89818},
+{"id":"BirthDeathUniformOperator.t:alignment","p":"NaN","accept":461677,"reject":2235076,"acceptFC":460018,"rejectFC":2227153,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:alignment","p":0.24877864588819887,"accept":96158,"reject":1253427,"acceptFC":95997,"rejectFC":1248674,"rejectIv":364614,"rejectOp":364614},
+{"id":"BirthDeathNarrow.t:alignment","p":"NaN","accept":127890,"reject":1221205,"acceptFC":127600,"rejectFC":1216685,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:alignment","p":"NaN","accept":1240,"reject":269832,"acceptFC":1239,"rejectFC":268861,"rejectIv":139181,"rejectOp":139181},
+{"id":"BirthDeathWilsonBalding.t:alignment","p":"NaN","accept":1241,"reject":268816,"acceptFC":1235,"rejectFC":267784,"rejectIv":49870,"rejectOp":49870},
+{"id":"KappaScaler.s:alignment","p":0.6745978704683171,"accept":1393,"reject":7520,"acceptFC":1385,"rejectFC":7491,"rejectIv":0,"rejectOp":0},
+{"id":"FrequenciesExchanger.s:alignment","p":0.02675786819190483,"accept":2351,"reject":6635,"acceptFC":2330,"rejectFC":6622,"rejectIv":0,"rejectOp":0},
+{"id":"ucldStdevScaler.c:alignment","p":0.2625188899897341,"accept":118996,"reject":151200,"acceptFC":118951,"rejectFC":150239,"rejectIv":0,"rejectOp":0},
+{"id":"CategoriesRandomWalk.c:alignment","p":"NaN","accept":577142,"reject":321601,"acceptFC":575580,"rejectFC":319885,"rejectIv":315059,"rejectOp":315059},
+{"id":"CategoriesSwapOperator.c:alignment","p":"NaN","accept":781844,"reject":116024,"acceptFC":781399,"rejectFC":113293,"rejectIv":0,"rejectOp":0},
+{"id":"CategoriesUniform.c:alignment","p":"NaN","accept":817903,"reject":82174,"acceptFC":817226,"rejectFC":79583,"rejectIv":0,"rejectOp":0}
+]}
+-->

@@ -1,14 +1,13 @@
 Registered S3 method overwritten by 'pryr':
   method      from
   print.bytes Rcpp
-Error: file.exists(beast2_options$output_state_filename) && length(paste0("beast2_output_state_filename not found. \n",  ....  is not TRUE
-Execution halted
+slurmstepd: error: *** JOB 10137114 ON pg-node211 CANCELLED AT 2020-03-17T01:44:10 DUE TO TIME LIMIT ***
 
 
 ###############################################################################
 Peregrine Cluster
-Job 10129913 for user 'p230198'
-Finished at: Mon Mar 16 13:56:49 CET 2020
+Job 10137114 for user 'p230198'
+Finished at: Tue Mar 17 01:44:12 CET 2020
 
 Job details:
 ============
@@ -16,21 +15,21 @@ Job details:
 Name                : run_example_20
 User                : p230198
 Partition           : gelifes
-Nodes               : pg-node213
+Nodes               : pg-node211
 Cores               : 1
-State               : FAILED
-Submit              : 2020-03-16T13:28:23
-Start               : 2020-03-16T13:28:24
-End                 : 2020-03-16T13:56:49
+State               : CANCELLED,TIMEOUT
+Submit              : 2020-03-16T15:43:53
+Start               : 2020-03-16T15:43:54
+End                 : 2020-03-17T01:44:12
 Reserved walltime   : 10:00:00
-Used walltime       : 00:28:25
-Used CPU time       : 00:25:54 (efficiency: 91.19%)
-% User (Computation): 98.07%
-% System (I/O)      :  1.93%
+Used walltime       : 10:00:18
+Used CPU time       : 09:02:28 (efficiency: 90.37%)
+% User (Computation): 98.61%
+% System (I/O)      :  1.39%
 Mem reserved        : 10G/node
-Max Mem used        : 857.22M (pg-node213)
-Max Disk Write      : 0.00  (pg-node213)
-Max Disk Read       : 112.64K (pg-node213)
+Max Mem used        : 1.07G (pg-node211)
+Max Disk Write      : 0.00  (pg-node211)
+Max Disk Read       : 112.64K (pg-node211)
 
 
 Acknowledgements:
