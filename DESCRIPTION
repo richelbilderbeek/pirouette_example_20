@@ -19,4 +19,4 @@ Imports:
     pirouette (>= 1.6),
     nLTT (>= 1.4.2)
 Suggests: tidyr
-Additional_repositories: https://github.com/richelbilderbeek/peregrine.git
+
