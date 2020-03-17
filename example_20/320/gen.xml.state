@@ -1,0 +1,16 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment'>(((((0:0.08553935052139881,7:0.08553935052139881)33:0.37682901666842256,((4:0.3292164669245503,8:0.3292164669245503)29:0.10528925535910638,(11:0.04927335427401247,12:0.04927335427401247)30:0.3852323680096442)21:0.02786264490616469)20:0.13496883746810578,(5:0.5140389386863783,16:0.5140389386863783)26:0.08329826597154888)28:0.3471820371263109,(((1:0.34206717218983657,(2:0.03411093645282497,(17:0.016236232627489276,18:0.016236232627489276)34:0.017874703825335698)32:0.3079562357370116)35:0.03740487816024907,19:0.37947205035008563)37:0.04233729672298647,(3:0.0070785128027055985,6:0.0070785128027055985)31:0.4147308342703665)24:0.5227098947111659)25:0.14982602525282118,(((9:0.07682821605841036,13:0.07682821605841036)22:0.01957388183074217,15:0.09640209788915254)27:0.04045929834982655,(10:0.10490500441450337,14:0.10490500441450337)36:0.03195639182447571)23:0.9574838707980802)38:0.0</statenode>
+<statenode id='birthRate.t:alignment'>birthRate.t:alignment[1 1] (-Infinity,Infinity): 3.130144471852896 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"YuleBirthRateScaler.t:alignment","p":0.3237606207777472,"accept":107121,"reject":292969,"acceptFC":106222,"rejectFC":292646,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeScaler.t:alignment","p":0.8580211633594185,"accept":66241,"reject":332597,"acceptFC":66191,"rejectFC":331404,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelTreeRootScaler.t:alignment","p":0.638352804545785,"accept":69781,"reject":329785,"acceptFC":69632,"rejectFC":328624,"rejectIv":81312,"rejectOp":81312},
+{"id":"YuleModelUniformOperator.t:alignment","p":"NaN","accept":573491,"reject":3428458,"acceptFC":571579,"rejectFC":3417839,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelSubtreeSlide.t:alignment","p":0.1586190049753949,"accept":202658,"reject":1797295,"acceptFC":202519,"rejectFC":1791209,"rejectIv":499025,"rejectOp":499025},
+{"id":"YuleModelNarrow.t:alignment","p":"NaN","accept":254288,"reject":1745501,"acceptFC":253531,"rejectFC":1739833,"rejectIv":0,"rejectOp":0},
+{"id":"YuleModelWide.t:alignment","p":"NaN","accept":1591,"reject":398849,"acceptFC":1586,"rejectFC":397564,"rejectIv":205417,"rejectOp":205417},
+{"id":"YuleModelWilsonBalding.t:alignment","p":"NaN","accept":629,"reject":398747,"acceptFC":624,"rejectFC":397478,"rejectIv":75704,"rejectOp":75704}
+]}
+-->

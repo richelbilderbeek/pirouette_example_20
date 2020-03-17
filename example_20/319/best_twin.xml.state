@@ -1,0 +1,18 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment_twin'>(((((((0:0.05127319341017811,8:0.05127319341017811)35:0.03497904352633635,(7:0.027674610366403306,19:0.027674610366403306)31:0.05857762657011115)36:0.06324748989842449,11:0.14949972683493895)29:0.12694356754640057,(2:0.27139159608294955,14:0.27139159608294955)30:0.005051698298389973)22:0.6113661376269656,((((1:0.09807683715639978,15:0.09807683715639978)26:0.09245846313983419,4:0.19053530029623397)24:0.30878610743848356,(3:0.4958270477148809,(6:0.14262801994293745,13:0.14262801994293745)28:0.35319902777194345)21:0.003494360019836662)27:0.08123771283477643,((5:0.26641472782685016,(10:0.17025066122607946,12:0.17025066122607946)20:0.0961640666007707)23:0.05487094298026529,16:0.32128567080711545)32:0.25927344976237854)34:0.3072503114388111)33:0.05082874373901969,9:0.9386381757473248)25:0.007016383696050177,(17:0.3319225044533702,18:0.3319225044533702)37:0.6137320549900047)38:0.0</statenode>
+<statenode id='BDBirthRate.t:alignment_twin'>BDBirthRate.t:alignment_twin[1 1] (0.0,10000.0): 2.7784208938457216 </statenode>
+<statenode id='BDDeathRate.t:alignment_twin'>BDDeathRate.t:alignment_twin[1 1] (0.0,1.0): 0.07377975166595004 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:alignment_twin","p":0.30403496470544994,"accept":104153,"reject":281269,"acceptFC":103289,"rejectFC":280998,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:alignment_twin","p":0.14314431940395894,"accept":98719,"reject":287377,"acceptFC":97796,"rejectFC":287187,"rejectIv":141193,"rejectOp":141193},
+{"id":"BirthDeathTreeScaler.t:alignment_twin","p":0.8429383236651309,"accept":52994,"reject":332158,"acceptFC":52943,"rejectFC":331113,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:alignment_twin","p":0.7209073059504076,"accept":57189,"reject":328353,"acceptFC":57097,"rejectFC":327316,"rejectIv":125704,"rejectOp":125704},
+{"id":"BirthDeathUniformOperator.t:alignment_twin","p":"NaN","accept":677816,"reject":3166504,"acceptFC":675751,"rejectFC":3157384,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:alignment_twin","p":0.1982767674610772,"accept":161121,"reject":1760938,"acceptFC":161007,"rejectFC":1755525,"rejectIv":477093,"rejectOp":477093},
+{"id":"BirthDeathNarrow.t:alignment_twin","p":"NaN","accept":212212,"reject":1710011,"acceptFC":211529,"rejectFC":1705072,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:alignment_twin","p":"NaN","accept":1600,"reject":383244,"acceptFC":1594,"rejectFC":382160,"rejectIv":197380,"rejectOp":197380},
+{"id":"BirthDeathWilsonBalding.t:alignment_twin","p":"NaN","accept":1589,"reject":382754,"acceptFC":1574,"rejectFC":381655,"rejectIv":71257,"rejectOp":71257}
+]}
+-->

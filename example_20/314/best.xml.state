@@ -1,0 +1,18 @@
+<itsabeastystatewerein version='2.0' sample='10000000'>
+<statenode id='Tree.t:alignment'>((((0:0.10580875948765045,4:0.10580875948765045)10:0.001723416358398025,8:0.10753217584604848)12:0.3911977609583662,(1:0.23042466458950292,((3:0.1712364865317159,7:0.1712364865317159)11:0.019119277214566105,(5:0.06146141429503953,6:0.06146141429503953)13:0.12889434945124245)14:0.04006890084322093)15:0.26830527221491174)17:0.7218851453344806,(2:0.12681057915162786,9:0.12681057915162786)16:1.0938045029872674)18:0.0</statenode>
+<statenode id='BDBirthRate.t:alignment'>BDBirthRate.t:alignment[1 1] (0.0,10000.0): 3.7328075623746213 </statenode>
+<statenode id='BDDeathRate.t:alignment'>BDDeathRate.t:alignment[1 1] (0.0,1.0): 0.006943432890019408 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"BirthRateScaler.t:alignment","p":0.22146235528795974,"accept":102495,"reject":282690,"acceptFC":101614,"rejectFC":282461,"rejectIv":0,"rejectOp":0},
+{"id":"DeathRateScaler.t:alignment","p":0.15063038973457563,"accept":97104,"reject":287646,"acceptFC":96113,"rejectFC":287515,"rejectIv":197228,"rejectOp":197228},
+{"id":"BirthDeathTreeScaler.t:alignment","p":0.8008935031799607,"accept":66605,"reject":318468,"acceptFC":66538,"rejectFC":317398,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathTreeRootScaler.t:alignment","p":0.5988829683394767,"accept":88641,"reject":296115,"acceptFC":88467,"rejectFC":295160,"rejectIv":91,"rejectOp":91},
+{"id":"BirthDeathUniformOperator.t:alignment","p":"NaN","accept":447395,"reject":3397962,"acceptFC":446072,"rejectFC":3388280,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathSubtreeSlide.t:alignment","p":0.14673649626783936,"accept":239337,"reject":1684465,"acceptFC":239185,"rejectFC":1679114,"rejectIv":417771,"rejectOp":417771},
+{"id":"BirthDeathNarrow.t:alignment","p":"NaN","accept":56202,"reject":1866290,"acceptFC":56003,"rejectFC":1860834,"rejectIv":0,"rejectOp":0},
+{"id":"BirthDeathWide.t:alignment","p":"NaN","accept":678,"reject":383963,"acceptFC":677,"rejectFC":382889,"rejectIv":203965,"rejectOp":203965},
+{"id":"BirthDeathWilsonBalding.t:alignment","p":"NaN","accept":140,"reject":383805,"acceptFC":138,"rejectFC":382702,"rejectIv":127759,"rejectOp":127759}
+]}
+-->
