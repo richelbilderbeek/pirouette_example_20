@@ -51,6 +51,11 @@ pir_outs <- pir_runs(
   pir_paramses = pir_paramses
 )
 
+# Save summary
+pir_plots(pir_outs) +
+  ggtitle(paste("Number of replicates: ", n_phylogenies)) +
+  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+
 # Save
 for (i in seq_along(n_taxa)) {
   n <- n_taxa[i]
