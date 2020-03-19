@@ -46,11 +46,9 @@ if (is_testing) {
 }
 
 # Do the runs
-
-# HACK: Take only the last 4
 pir_outs <- pir_runs(
-  phylogenies = phylogenies[16:20],
-  pir_paramses = pir_paramses[16:20]
+  phylogenies = phylogenies,
+  pir_paramses = pir_paramses
 )
 
 # Save summary
