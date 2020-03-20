@@ -1,0 +1,44 @@
+Registered S3 method overwritten by 'pryr':
+  method      from
+  print.bytes Rcpp
+Warning message:
+In pirouette::sim_alignment_with_n_mutations(phylogeny = twin_phylogeny,  :
+  'sim_alignment_with_n_mutations' tried 10000 times, without simulating an alignment with 15920 mutations
+
+
+###############################################################################
+Peregrine Cluster
+Job 10198259 for user 'p230198'
+Finished at: Fri Mar 20 00:59:53 CET 2020
+
+Job details:
+============
+
+Name                : pirex20
+User                : p230198
+Partition           : gelifes
+Nodes               : pg-node211
+Cores               : 1
+State               : COMPLETED
+Submit              : 2020-03-19T09:42:56
+Start               : 2020-03-19T09:42:56
+End                 : 2020-03-20T00:59:53
+Reserved walltime   : 1-16:00:00
+Used walltime       :   15:16:57
+Used CPU time       :   13:50:28 (efficiency: 90.57%)
+% User (Computation): 98.70%
+% System (I/O)      :  1.30%
+Mem reserved        : 10G/node
+Max Mem used        : 1.11G (pg-node211)
+Max Disk Write      : 0.00  (pg-node211)
+Max Disk Read       : 112.64K (pg-node211)
+
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Peregrine in your publications:
+
+https://wiki.hpc.rug.nl/peregrine/additional_information/scientific_output
+
+################################################################################
