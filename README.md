@@ -10,19 +10,19 @@ that shows the true and twin error distribution for an increasing number of taxa
 
 ## Results
 
+5 taxa:
+
+![5 taxa](errors_5.png)
+
 10 taxa:
 
-![](example_20_314/errors.png)
+![10 taxa](errors_10.png)
 
 20 taxa:
 
-![](example_20_315/errors.png)
+![20 taxa](errors_20.png)
 
 30 taxa:
 
-![](example_20_316/errors.png)
-
-40 taxa:
-
-![](example_20_317/errors.png)
+![30 taxa](errors_30.png)
 
