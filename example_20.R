@@ -10,7 +10,7 @@ library(testthat)
 # Constants
 is_testing <- is_on_ci()
 example_no <- 20
-n_replicates <- 2
+n_replicates <- 5
 n_taxa <- c(5, 10, 20, 30)
 crown_age <- 10
 folder_name <- paste0("example_", example_no)

@@ -7,7 +7,7 @@
 #   ./scripts/rerun.sh
 #
 #SBATCH --partition=gelifes
-#SBATCH --time=32:00:00
+#SBATCH --time=96:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
