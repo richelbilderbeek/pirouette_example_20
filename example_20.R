@@ -53,8 +53,7 @@ pir_outs <- pir_runs(
 
 # Save summary
 pir_plots(pir_outs) +
-  ggtitle(paste("Number of replicates: ", n_replicates)) +
-  ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
+  ggtitle(paste("Number of replicates: ", n_replicates)); ggsave(file.path(folder_name, "errors.png"), width = 7, height = 7)
 
 # Save
 for (i in seq_along(n_taxa)) {
@@ -63,6 +62,5 @@ for (i in seq_along(n_taxa)) {
   to_index <- ((i - 1) * n_replicates) + n_replicates
   pir_plots(
     pir_outs = pir_outs[from_index:to_index]
-  ) + ggtitle(paste("Number of taxa:", n)) +
-    ggsave(filename = paste0("errors_", n, ".png"), width = 7, height = 7)
+  ) + ggtitle(paste("Number of taxa:", n)); ggsave(filename = paste0("errors_", n, ".png"), width = 7, height = 7)
 }
